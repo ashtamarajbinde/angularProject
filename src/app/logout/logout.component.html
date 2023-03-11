@@ -1,0 +1,21 @@
+<div class="card w-50  ">
+    <div class="card-body ">
+        <div class="container bg-primary">
+            <div class="row justify-content-center">
+
+                <form action=""[formGroup]="LogoutForm" >
+                    <h5 class="card-title">Forgot Password </h5>
+                    <div class="Form-Group">
+                        <label class="Form-label">Email</label>
+                        <input type="email" class="form-control" name="email" formControlName="email"
+                         placeholder="enter email">
+                         <span class="text-danger"
+            *ngIf="!LogoutForm.get('email')?.valid && LogoutForm.get('email')?.touched">enter valid email</span>
+           
+                    </div> <br>
+                    <button class="btn btn-danger" (click)="out()">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

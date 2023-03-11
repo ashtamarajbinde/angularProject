@@ -1,0 +1,93 @@
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="container-fluid cont">
+    <form class="" [formGroup]="Register">
+        <h1 class="text-center">Register</h1>
+        <hr><br>
+        <div class="col-md d-flex">
+            <div class="col-md">
+                <label for="" class="form-label">First Name</label>
+                <input type="text" class="form-control" name="fname" formControlName="fname">
+           <span class="text-danger"
+            *ngIf="!Register.get('fname')?.valid && Register.get('fname')?.touched">enter valid first name</span>
+            </div>&nbsp;&nbsp;
+            &nbsp;
+            &nbsp;
+            <div class="col-md">
+                <label for="" class="form-label">Last Name</label>
+                <input type="text" class="form-control" name="lname" formControlName="lname">
+                <span class="text-danger"
+            *ngIf="!Register.get('lname')?.valid && Register.get('lname')?.touched">enter valid last name</span>
+            </div>
+        </div>
+        <div class="col-md d-flex">
+            <div class="col-md">
+                <label for="" class="form-label">Gender</label>
+                <input type="text" class="form-control" name="gender" formControlName="gender">
+                
+            </div>&nbsp;&nbsp;
+            &nbsp;
+            &nbsp;
+            <div class="col-md">
+                <label for="" class="form-label">Country</label>
+                <select name="countryId" formControlName="countryId" class="form-control"
+                    (change)="stateid($any($event.target).value)">
+                    <option *ngFor="let count of countries|keyvalue" [value]="count.key">
+                        {{count.value}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md d-flex">
+            <div class="col-md">
+                <label for="" class="form-label">State</label>
+                <select name="stateId" formControlName="stateId" class="form-control"
+                    (change)="cityId($any($event.target).value)">
+                    <option *ngFor="let count of state|keyvalue" [value]="count.key">{{count.value}}</option>
+                </select>
+                
+            </div>&nbsp;&nbsp;
+            &nbsp;
+            &nbsp;
+            <div class="col-md">
+                <label for="" class="form-label">City</label>
+                <select name="cityId" formControlName="cityId" class="form-control">
+                    <option *ngFor="let count of city|keyvalue" [value]="count.key">{{count.value}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md d-flex">
+            <div class="col-md">
+                <label for="" class="form-label">Date Of Birth</label>
+                <input type="date" class="form-control" name="dob" formControlName="dob">
+            </div>&nbsp;&nbsp;
+            &nbsp;
+            &nbsp;
+            <div class="col-md">
+                <label for="" class="form-label">Email</label>
+                <input type="email" #email  (blur)="emailCheck($any($event.target).value)" class="form-control" name="email"
+                    formControlName="email">
+                    <span class="text-danger"
+            *ngIf="!Register.get('email')?.valid && Register.get('email')?.touched">enter valid email</span>
+            </div>
+        </div>
+        <div class="col-md d-flex">
+            <div class="col-md">
+                <label for="" class="form-label">Mobile Number</label>
+                <input type="text" class="form-control" name="phno" formControlName="phno">
+                <span class="text-danger"
+            *ngIf="!Register.get('phno')?.valid && Register.get('phno')?.touched">enter valid phno</span>
+            </div>
+        </div>
+        <div class="col-md mt-3 set">
+<button type="submit" class="btn btn-primary" (click)="regiUser()">Register</button>&nbsp;&nbsp;&nbsp;
+<button type="reset" class="btn btn-danger">Reset</button>
+        </div>
+
+
+
+    </form>
+
+</div>
+
+
+
