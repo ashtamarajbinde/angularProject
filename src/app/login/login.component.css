@@ -15,3 +15,6 @@ button{
 h2{
     font-weight: bold;
 }
+.container{
+    background: linear-gradient(pink,red,palegreen,yellow,paleturquoise);
+}

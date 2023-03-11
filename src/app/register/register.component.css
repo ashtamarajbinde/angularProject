@@ -12,3 +12,6 @@ button{
     font-size: 20px;
     border: 3px solid red;
 }
+.container{
+    background: linear-gradient(pink,red,palegreen,yellow,paleturquoise);
+}
