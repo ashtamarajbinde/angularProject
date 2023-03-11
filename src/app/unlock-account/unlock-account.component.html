@@ -1,38 +1,36 @@
-<div class="card w-50  ">
-    <div class="card-body ">
-        <div class="container bg-secondary">
-            <div class="row justify-content-center">
 
-                <form action="" [formGroup]="UnlockForm">
-                    <h5 class="card-title">Unlock-Account </h5>
-                    <div class="Form-Group">
-                        <label class="Form-label">Email Id</label>
-                        <input type="emailid" class="form-control" formControlName="email" name="email"
-                         placeholder="enter emailid">
-                         <span class="text-danger"
-                         *ngIf="!UnlockForm.get('email')?.valid && UnlockForm.get('email')?.touched">enter valid email</span>
-                        
-                    </div>
-                    <div class="Form-Group">
-                        <label class="Form-label">Temporary Pwd</label>
-                        <input type="text" class="form-control" formControlName="tempPwd" name="tempPwd"
-                        placeholder="enter temporaryPwd">
-                    </div>
-                    <div class="Form-Group">
-                        <label class="Form-label">Choose New Pwd</label>
-                        <input type="password" class="form-control" formControlName="newPwd" name="newPwd"
-                          placeholder="enter chooseNewPwd">
-                    </div>
+    
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="" [formGroup]="UnlockForm">
+                <h2 class="row justify-content-center">Unlock-Account</h2>
+                <div class="Form-Group">
+                    <label class="Form-label">Email Id</label>
+                    <input type="emailid" class="form-control" formControlName="email" name="email"
+                     placeholder="Enter Your Email Id">
+                     <span class="text-danger"
+                     *ngIf="!UnlockForm.get('email')?.valid && UnlockForm.get('email')?.touched">enter valid email</span>
                     
-                    <div class="Form-Group">
-                        <label class="Form-label">Confirm Pwd</label>
-                        <input type="password" class="form-control" formControlName="confirmPwd" name="confirmPwd" placeholder="enter confirmPwd">
-                    </div>
-                    <button class="btn btn-danger" (click)="SubmitBtn()">Submit</button>
-                </form>   
+                </div>
+                <div class="Form-Group">
+                    <label class="Form-label">Temporary Password</label>
+                    <input type="text" class="form-control" formControlName="tempPwd" name="tempPwd"
+                    placeholder="Enter Your Temporary Password">
+                </div>
+                <div class="Form-Group">
+                    <label class="Form-label">New Password</label>
+                    <input type="password" class="form-control" formControlName="newPwd" name="newPwd"
+                      placeholder="Enter Your Choose Password">
+                </div>
                 
-                
-               </div>    
-            </div>    
-        </div>    
-    </div>    
+                <div class="Form-Group">
+                    <label class="Form-label">Confirm Password</label>
+                    <input type="password" class="form-control" formControlName="confirmPwd" name="confirmPwd" placeholder="Enter Your Confirm Password">
+                </div> 
+                <button class="" (click)="SubmitBtn()">Submit</button>
+           
+                </form>
+            </div>
+        </div>
+</div>

@@ -1,26 +1,21 @@
-
-
-
 <nav class="navbar bg-body-tertiary">
-    <div class="container-fluid bg-warning ">
-      <span class="navbar-brand mb-0 h1 text-light">Logo</span>
-    
-  <ul class="nav justify-content-end">
-    
-    <li class="nav-item">
-      <a class="nav-link text-light" [routerLink]="['login']">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-light" [routerLink]="['logout']">Logout</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-light "[routerLink]="['register']">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-light "[routerLink]="['unlock-account']">Unlock-Account</a>
+  <div class="container-fluid bg-warning ">
+    <ul class="nav justify-content-end">
+
+      <li class="nav-item">
+        <a class="nav-link text-light" [routerLink]="['login']">Login</a>
       </li>
-  </ul>
+      <li class="nav-item">
+        <a class="nav-link text-light" [routerLink]="['logout']">Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light " [routerLink]="['register']">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light " [routerLink]="['unlock-account']">Unlock-Account</a>
+      </li>
+    </ul>
   </div>
-  </nav>
+</nav>
 
 <router-outlet></router-outlet>

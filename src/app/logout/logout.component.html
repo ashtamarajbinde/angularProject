@@ -1,21 +1,23 @@
-<div class="card w-50  ">
-    <div class="card-body ">
-        <div class="container bg-primary">
-            <div class="row justify-content-center">
-
-                <form action=""[formGroup]="LogoutForm" >
-                    <h5 class="card-title">Forgot Password </h5>
-                    <div class="Form-Group">
-                        <label class="Form-label">Email</label>
-                        <input type="email" class="form-control" name="email" formControlName="email"
-                         placeholder="enter email">
-                         <span class="text-danger"
-            *ngIf="!LogoutForm.get('email')?.valid && LogoutForm.get('email')?.touched">enter valid email</span>
-           
-                    </div> <br>
-                    <button class="btn btn-danger" (click)="out()">Submit</button>
-                </form>
-            </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="" [formGroup]="LogoutForm">
+                <h2 class="row justify-content-center">Logout</h2>
+                <div class="Form-Group">
+                    <label class="Form-label">Email Id</label> <br>
+                    <input type="email" class="form-control" name="email" formControlName="email"
+                        placeholder="Enter your Email Id">
+                    <span class="text-danger"
+                        *ngIf="!LogoutForm.get('email')?.valid && LogoutForm.get('email')?.touched">enter valid
+                        email</span>
+                </div> <br>
+                <div class="row justify-content-center">
+                    <button class="" (click)="out()">Login</button>
+                </div> 
+               
+                <a href="">Back</a>
+                    <a href="" class="ash">Register</a>
+            </form>
         </div>
     </div>
 </div>
